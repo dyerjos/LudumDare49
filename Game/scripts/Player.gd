@@ -118,8 +118,16 @@ func process_tile():
 #					print("hole in ice!")
 				if GameManager.PERMA_DEATH == true:
 					GameManager.CURRENT_PLAYER_COUNT -= 1
+					if HAS_GOLD == true:
+						HAS_GOLD = false
+						$Gold.visible = false
+						GameManager.LOST_GOLD += 1
 					queue_free()
 				else:
+					if HAS_GOLD == true:
+						HAS_GOLD = false
+						$Gold.visible = false
+						GameManager.LOST_GOLD += 1
 					self.position = get_node("../../StartingPositions/Player_start" + str(player_id)).position
 #				22:
 #					print("grey floor")
