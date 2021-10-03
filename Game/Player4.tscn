@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Tilesets/BigTilemap.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 440, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 1 )
+region = Rect2( 560, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 1 )
+region = Rect2( 520, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 1 )
+region = Rect2( 280, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 1 )
+region = Rect2( 360, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 40, 40 )
+
+[sub_resource type="SpriteFrames" id=10]
+resource_local_to_scene = true
+animations = [ {
+"frames": [ SubResource( 45 ), SubResource( 46 ) ],
+"loop": true,
+"name": "Up",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "Right",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 49 ) ],
+"loop": true,
+"name": "RightIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ) ],
+"loop": true,
+"name": "Down",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 52 ) ],
+"loop": false,
+"name": "DownIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 53 ) ],
+"loop": false,
+"name": "UpIdle",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 2, 4 )
+
+[node name="Player4" type="KinematicBody2D"]
+position = Vector2( 24.0039, 65.8359 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+ACCELERATION = 200
+MAX_SPEED = 80
+
+[node name="Sprite4" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.18, 0.18 )
+frames = SubResource( 10 )
+animation = "Right"
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 11 )
