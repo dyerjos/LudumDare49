@@ -89,13 +89,13 @@ func process_tile():
 #					print("wood floor")
 					if HAS_GOLD:
 						HAS_GOLD = false
-						add_gold_to_player(player_id)
+						add_gold_to_player()
 						MainTileMap.set_cellv(_map_position, 15)
 				15:
 #					print("wood floor level 2 gold")
 					if HAS_GOLD:
 						HAS_GOLD = false
-						add_gold_to_player(player_id)
+						add_gold_to_player()
 						MainTileMap.set_cellv(_map_position, 14)
 #				14:
 #					print("wood floor level 3 gold")
@@ -107,7 +107,7 @@ func process_tile():
 		
 			prev_map_position = _map_position
 			
-func add_gold_to_player(player_id):
+func add_gold_to_player():
 	match player_id:
 		1:
 			GameManager.PLAYER_GOLD_1 += 1
