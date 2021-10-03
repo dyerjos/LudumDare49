@@ -893,17 +893,7 @@ animations = [ {
 
 [node name="Main" type="Node2D"]
 
-[node name="MapPlaceholder" type="ColorRect" parent="."]
-margin_left = -0.012619
-margin_top = 0.0378571
-margin_right = 511.987
-margin_bottom = 512.038
-rect_clip_content = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TileMap" type="TileMap" parent="."]
+[node name="MainTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 17 )
 cell_size = Vector2( 8, 8 )
 format = 1
