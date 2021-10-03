@@ -62,7 +62,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 2, 4 )
+extents = Vector2( 2, 3.5 )
 
 [node name="Player2" type="KinematicBody2D"]
 position = Vector2( 67.1673, 77.2574 )
@@ -73,11 +73,21 @@ __meta__ = {
 ACCELERATION = 200
 MAX_SPEED = 80
 
+[node name="Gold" type="ColorRect" parent="."]
+visible = false
+margin_left = -2.0
+margin_top = -6.0
+margin_right = 3.0
+margin_bottom = -1.0
+color = Color( 1, 0.639216, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite2" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.18, 0.18 )
 frames = SubResource( 7 )
 animation = "Right"
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 8 )

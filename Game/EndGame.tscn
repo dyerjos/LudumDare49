@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Levels/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://scripts/EndGame.gd" type="Script" id=1]
 
 [node name="EndGame" type="Panel"]
 pause_mode = 2
-margin_left = 100.0
-margin_top = 50.5085
-margin_right = 300.0
-margin_bottom = 150.509
+margin_left = 155.0
+margin_top = 50.508
+margin_right = 355.0
+margin_bottom = 200.508
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -15,50 +15,122 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 200.0
-margin_bottom = 100.0
+margin_bottom = 149.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 37.0
-margin_top = 27.0
-margin_right = 163.0
-margin_bottom = 73.0
+margin_left = 39.0
+margin_top = 15.0
+margin_right = 160.0
+margin_bottom = 133.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 126.0
+margin_right = 121.0
 margin_bottom = 14.0
 alignment = 1
 
-[node name="FinalScore" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 74.0
+[node name="PlayerScore1" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 7.0
+margin_right = 61.0
 margin_bottom = 14.0
-text = "Final Time: "
+text = "P1 Gold:"
 
 [node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 78.0
-margin_right = 126.0
+margin_left = 65.0
+margin_right = 113.0
+margin_bottom = 14.0
+text = "999999"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+alignment = 1
+
+[node name="PlayerScore2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 7.0
+margin_right = 61.0
+margin_bottom = 14.0
+text = "P2 Gold:"
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 65.0
+margin_right = 113.0
+margin_bottom = 14.0
+text = "999999"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 50.0
+alignment = 1
+
+[node name="PlayerScore3" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+margin_left = 7.0
+margin_right = 61.0
+margin_bottom = 14.0
+text = "P3 Gold:"
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+margin_left = 65.0
+margin_right = 113.0
+margin_bottom = 14.0
+text = "999999"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 54.0
+margin_right = 121.0
+margin_bottom = 68.0
+alignment = 1
+
+[node name="PlayerScore4" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 7.0
+margin_right = 61.0
+margin_bottom = 14.0
+text = "P4 Gold:"
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 65.0
+margin_right = 113.0
+margin_bottom = 14.0
+text = "999999"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 121.0
+margin_bottom = 86.0
+alignment = 1
+
+[node name="FinalTime" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer6"]
+margin_left = 14.0
+margin_right = 54.0
+margin_bottom = 14.0
+text = "Time: "
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer6"]
+margin_left = 58.0
+margin_right = 106.0
 margin_bottom = 14.0
 text = "999999"
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 126.0
-margin_bottom = 22.0
+margin_top = 90.0
+margin_right = 121.0
+margin_bottom = 94.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 26.0
-margin_right = 126.0
-margin_bottom = 46.0
+margin_top = 98.0
+margin_right = 121.0
+margin_bottom = 118.0
 alignment = 1
 
 [node name="PlayAgainButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 2.0
-margin_right = 79.0
+margin_right = 77.0
 margin_bottom = 20.0
 text = "Play Again"
 __meta__ = {
@@ -66,8 +138,8 @@ __meta__ = {
 }
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 83.0
-margin_right = 123.0
+margin_left = 81.0
+margin_right = 121.0
 margin_bottom = 20.0
 text = "Quit"
 __meta__ = {

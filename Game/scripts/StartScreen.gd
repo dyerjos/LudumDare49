@@ -42,3 +42,28 @@ func play_music():
 	print("I should be playing music now in Start Screen")
 #	var intense_music = INTENSE_MUSIC.instance()
 #	get_parent().add_child(intense_music)
+
+func _on_PermaDeath_pressed() -> void:
+	if GameManager.PERMA_DEATH == false:
+		GameManager.PERMA_DEATH = true
+		$PermaDeath.text = "Perma Death: ON"
+	else:
+		GameManager.PERMA_DEATH = false
+		$PermaDeath.text = "Perma Death: OFF"
+
+func _on_FriendlyFire_pressed() -> void:
+	if GameManager.FRIENDLY_FIRE == false:
+		GameManager.FRIENDLY_FIRE = true
+		$FriendlyFire.text = "Friendly Fire: ON"
+	else:
+		GameManager.FRIENDLY_FIRE = false
+		$FriendlyFire.text = "Friendly Fire: OFF"
+
+
+func _on_CanSteal_pressed() -> void:
+	if GameManager.CAN_STEAL == false:
+		GameManager.CAN_STEAL = true
+		$CanSteal.text = "Can Steal: ON"
+	else:
+		GameManager.CAN_STEAL = false
+		$CanSteal.text = "Can Steal: OFF"

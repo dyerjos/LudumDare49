@@ -21,6 +21,7 @@ script = ExtResource( 1 )
 margin_right = 516.274
 margin_bottom = 516.274
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -34,6 +35,7 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Treasure and Ice"
 align = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -48,6 +50,7 @@ text = "A Ludum Dare 49 game
 By Joshua Dyer"
 align = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -61,6 +64,7 @@ margin_right = 309.978
 margin_bottom = 240.527
 text = "Single Player"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -74,6 +78,7 @@ margin_right = 309.978
 margin_bottom = 264.527
 text = "Two Player"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -87,6 +92,7 @@ margin_right = 309.978
 margin_bottom = 289.527
 text = "Three Player"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -100,13 +106,71 @@ margin_right = 309.978
 margin_bottom = 314.527
 text = "Four Player"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Player2Position" type="Position2D" parent="."]
-position = Vector2( 260, 216 )
+[node name="Settings" type="Label" parent="."]
+margin_left = 1.81625
+margin_top = 331.179
+margin_right = 519.816
+margin_bottom = 364.179
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Settings:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PermaDeath" type="Button" parent="."]
+pause_mode = 2
+anchor_top = 0.0763052
+anchor_bottom = 0.0763052
+margin_left = 198.475
+margin_top = 362.908
+margin_right = 326.475
+margin_bottom = 382.908
+hint_tooltip = "If on, players will not respawn when killed. If off, players will respawn in their homes with no gold."
+text = "Perma Death: OFF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FriendlyFire" type="Button" parent="."]
+pause_mode = 2
+visible = false
+anchor_top = 0.0763052
+anchor_bottom = 0.0763052
+margin_left = 199.114
+margin_top = 389.429
+margin_right = 327.114
+margin_bottom = 409.429
+hint_tooltip = "If on, players will not respawn when killed. If off, players will respawn in their homes with no gold."
+text = "Friendly Fire: OFF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanSteal" type="Button" parent="."]
+pause_mode = 2
+visible = false
+anchor_top = 0.0763052
+anchor_bottom = 0.0763052
+margin_left = 198.877
+margin_top = 415.311
+margin_right = 326.877
+margin_bottom = 435.311
+hint_tooltip = "If on, players will not respawn when killed. If off, players will respawn in their homes with no gold."
+text = "Can Steal: OFF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="SinglePlayer" to="." method="_on_SinglePlayer_pressed"]
 [connection signal="pressed" from="TwoPlayer" to="." method="_on_TwoPlayer_pressed"]
 [connection signal="pressed" from="ThreePlayer" to="." method="_on_ThreePlayer_pressed"]
 [connection signal="pressed" from="FourPlayer" to="." method="_on_FourPlayer_pressed"]
+[connection signal="pressed" from="PermaDeath" to="." method="_on_PermaDeath_pressed"]
+[connection signal="pressed" from="FriendlyFire" to="." method="_on_FriendlyFire_pressed"]
+[connection signal="pressed" from="CanSteal" to="." method="_on_CanSteal_pressed"]
