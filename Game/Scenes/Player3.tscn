@@ -1,73 +1,73 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tilesets/BigTilemap.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 440, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 480, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 560, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 600, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 520, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
 region = Rect2( 280, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
 region = Rect2( 360, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
 region = Rect2( 400, 0, 40, 40 )
 
 [sub_resource type="SpriteFrames" id=10]
 resource_local_to_scene = true
 animations = [ {
-"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "Up",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "Right",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 22 ) ],
+"frames": [ SubResource( 5 ) ],
 "loop": true,
 "name": "RightIdle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
 "name": "Down",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 25 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": false,
 "name": "DownIdle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 26 ) ],
+"frames": [ SubResource( 9 ) ],
 "loop": false,
 "name": "UpIdle",
 "speed": 10.0
@@ -76,8 +76,8 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 2, 4 )
 
-[node name="Player1" type="KinematicBody2D"]
-position = Vector2( 50, 50 )
+[node name="Player3" type="KinematicBody2D"]
+position = Vector2( 77.818, 47.2673 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -85,7 +85,7 @@ __meta__ = {
 ACCELERATION = 200
 MAX_SPEED = 80
 
-[node name="Sprite1" type="AnimatedSprite" parent="."]
+[node name="Sprite3" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.18, 0.18 )
 frames = SubResource( 10 )
 animation = "Right"
