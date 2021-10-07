@@ -26,7 +26,7 @@ func _process(delta: float):
 	game_over_check()
 
 func game_over_check():
-	if GOLD_IN_CENTER - GOLD_IN_HOUSES - LOST_GOLD == 0:
+	if 12 - GOLD_IN_HOUSES - LOST_GOLD == 0:
 		get_tree().paused = true
 		var end_game = EndGame.instance()
 		get_tree().get_root().add_child(end_game)
